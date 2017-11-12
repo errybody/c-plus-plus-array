@@ -1,0 +1,21 @@
+
+//Simulate five thousand rounds of Aunt's lottery and tell her the mean winning number.
+
+#include <iostream>
+using namespace std;
+main(){
+
+ // set up parameters and seed generator
+ int rounds = 0;
+ int lucky_number = 777777;
+ int odds = 1000000;
+ srand ( time (0) );
+
+ // run rounds of lottery until the lucky number comes up
+ while ( ( rand() % odds ) != lucky_number ) {
+  rounds ++;
+ }
+
+ // report how many rounds it took
+ cout << "To win took " << rounds << " rounds of the lottery." << endl;
+}
