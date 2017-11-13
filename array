@@ -1,40 +1,32 @@
-
 #include <iostream>
 using namespace std;
   main(){
 
  // Set up parameters and seed generator
- int rounds = 0;
+
  int odds = 1000000;
  srand ( time (0) );
- 
- //Create lottery numbers to feed into our array
- 
-int lottery_numbers [5];
-int lottery_index;
-
-  while ( ( rand() % odds ) != 5 ) {
-  rounds ++;
- }
-
-// print out the whole series
-for ( lottery_index = 0; lottery_index < 5 ; lottery_index ++ ) {
-cout << lottery_index << "\t" << lottery_numbers [ lottery_index ] << endl;
-}
 
 //Set array to 5000 elements
-long lotteryArray[5]= {4, 3, 2, 8, 7};
+long lotteryArray[5000]= { };
+
+//Seed array with our lottery numbers
+
+for(int i=0;i<1;i++)
+	{
+		lotteryArray[i]=rand()% odds;
+	}
+
 
 //Inititalize the accumulator to zero
 long sum=0;
 
-for (int i=0; i < 5; i ++)
+for (int i=0; i <5000; i ++)
     sum += lotteryArray[i];
     
     cout << "The sum of the array is " << sum << endl;
     
     cout << "The average of the array is " << sum / 5 << endl;
-    
-    //Print out results of array
-    
-    cout << "The array list is " << lotteryArray[0] << lotteryArray[1] << endl;
+ 
+
+}
