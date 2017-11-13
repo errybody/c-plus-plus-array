@@ -3,19 +3,35 @@
 
 #include <iostream>
 using namespace std;
-main(){
+  main(){
 
  // set up parameters and seed generator
  int rounds = 0;
  int lucky_number = 777777;
  int odds = 1000000;
  srand ( time (0) );
+ 
 
- // run rounds of lottery until the lucky number comes up
- while ( ( rand() % odds ) != lucky_number ) {
-  rounds ++;
- }
 
- // report how many rounds it took
- cout << "To win took " << rounds << " rounds of the lottery." << endl;
+
+//Explicity define number of rounds
+long total_rounds=5;
+long sum=0;
+//SEt array
+long lotteryArray[5]={4,3,5};
+long lottery_number;
+for (lottery_number = 0 ; lottery_number < 5 ; lottery_number ++ ) 
+//Inititalize the accumulator to zero
+
+
+for (int i=0; i < total_rounds; i ++)
+    sum += lotteryArray[i];
+    
+    cout << "The sum of the array is " << sum << endl;
+    
+    cout << "The average of the array is " << sum / 5 << endl;
+    
+    //Print out results of array
+    
+    cout << "The array list is " << lotteryArray[3] << endl;
 }
