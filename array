@@ -6,16 +6,39 @@ using namespace std;
 main(){
 
  // set up parameters and seed generator
- int rounds = 0;
- int lucky_number = 777777;
  int odds = 1000000;
+ long int numbers;
+ long int total_rounds=10
  srand ( time (0) );
-
- // run rounds of lottery until the lucky number comes up
- while ( ( rand() % odds ) != lucky_number ) {
+ 
+ number = rand() % odds;
+ 
+ //set up array
+long rounds[10], sum=0.0, average;
+ long n, i;
+ 
+ // run rounds of lottery 5000 times
+ do 
+ while ( rounds != total_rounds ) {
   rounds ++;
  }
 
- // report how many rounds it took
- cout << "To win took " << rounds << " rounds of the lottery." << endl;
+
+//Take average of array , sum divided by count
+
+for (int x = 0; x < size; x++)
+{
+    sum += numbers[x];
+    arrayAverage = sum / size;
+}
+
+long average(long numbers[], int total_rounds) {
+    long sum = 0;
+    for (int x = 0; x < size; x++)
+    {
+        sum += numbers[x];
+    }
+    return sum /(long)size;
+}
+}
 }
