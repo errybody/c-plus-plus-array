@@ -3,7 +3,7 @@
 
 #include <iostream>
 using namespace std;
-main(){
+  main(){
 
  // set up parameters and seed generator
  int rounds = 0;
@@ -11,11 +11,23 @@ main(){
  int odds = 1000000;
  srand ( time (0) );
 
- // run rounds of lottery until the lucky number comes up
- while ( ( rand() % odds ) != lucky_number ) {
-  rounds ++;
- }
+//Explicity define number of rounds
+long total_rounds=5;
 
- // report how many rounds it took
- cout << "To win took " << rounds << " rounds of the lottery." << endl;
+//SEt array
+long array[total_rounds]={6};
+
+//Inititalize the accumulator to zero
+long sum=0;
+
+for (long i=0; i < total_rounds; i ++)
+    sum += array[i];
+    
+    cout << "The sum of the array is " << array[total_rounds] << endl;
+    
+    cout << "The average of the array is " << sum / total_rounds << endl;
+    
+    //Print out results of array
+    
+    cout << "The array list is " << array[total_rounds] << endl;
 }
