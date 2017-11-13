@@ -11,6 +11,26 @@ main(){
  int odds = 1000000;
  srand ( time (0) );
 
+//Explicity define number of rounds
+long total_rounds=10;
+
+//SEt array
+long array={number, number, 
+
+//Inititalize the accumulator to zero
+long sum=0;
+
+for (long i=0; i < total_rounds; i ++)
+    sum += array[i];
+    
+    cout << "The sume of the array is " << array << endl;
+    
+    cout << "The average of the array is " << sum / total_rounds << endl;
+    
+    //Print out results of array
+    
+    cout << array[i] << endl;
+
  // run rounds of lottery until the lucky number comes up
  while ( ( rand() % odds ) != lucky_number ) {
   rounds ++;
